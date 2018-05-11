@@ -1,0 +1,31 @@
+void    is_unlocked_slot(Entities **e, t_Elem **elem, sfRenderWindow *window)
+{
+        if ((*e)->score >= 1) {
+                (*elem)->fruit_cherry->unlock = 1;
+        }
+        if ((*e)->score >= 2) {
+                (*elem)->color_green->unlock = 1;
+                (*elem)->flavour_vanilla->unlock = 1;
+                (*elem)->cream_vanilla->unlock = 1;
+                (*elem)->deco_caramel->unlock = 1;
+        }
+        if ((*e)->score >= 5) {
+                (*elem)->color_blue->unlock = 1;
+                (*elem)->flavour_caramel->unlock = 1;
+                (*elem)->cream_caramel->unlock = 1;
+                (*elem)->deco_sugar->unlock = 1;
+        }
+        if ((*e)->score >= 10) {
+                (*elem)->color_yellow->unlock = 1;
+                (*elem)->flavour_strawberry->unlock = 1;
+                (*elem)->cream_strawberry->unlock = 1;
+                (*elem)->fruit_strawberry->unlock = 1;
+        }
+        if ((*e)->score >= 15) {
+                (*elem)->color_red->unlock = 1;
+                (*elem)->flavour_banana->unlock = 1;
+                (*elem)->cream_pink->unlock = 1;
+        }
+}
+
+
